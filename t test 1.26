@@ -1,0 +1,45 @@
+01/16/2026 Weston shaniah , Purpose Test: T-Test
+ # Generate dummy dataset
+x = rnorm(10)
+y = rnorm(10)
+
+# Plot the variables x and y using density plot 
+pts = seq(-4.5,4.5,length=100)
+plot(pts,dt(pts,df=9),col='red',type='l')
+lines(density(x), col='green')
+lines(density(y), col='blue')
+
+#Apply the function for t test
+ttest = t.test(x,y) 
+
+ Welch Two Sample t-test
+
+data:  x and y
+t = -0.13852, df = 17.692, p-value = 0.8914
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -1.077791  0.944616
+sample estimates:
+  mean of x   mean of y 
+-0.11699896 -0.05041136 
+
+# Add a tittle to this plot, title name should be " T Test"
+pts = seq(-4.5,4.5,length=100)
+plot(pts,dt(pts,df=9),col='red',type='l', main="T test", )
+lines(density(x), col='green')
+lines(density(y), col='blue')
+
+# Add labels to X and Y axis and label names should be 
+for X add "sequence", Y add "Density of X and Y"
+pts = seq(-4.5,4.5,length=100)
+plot(pts,dt(pts,df=9),col='red',type='l', main="T test"
+,xlab="Sequence",ylab="Density of X and Y", lty=2)
+lines(density(x), col='green')
+lines(density(y), col='blue')
+
+#create a dashed line instead of a contiuous line 
+
+
+
+
+
